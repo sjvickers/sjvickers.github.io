@@ -1,42 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<!-- InstanceBegin template="/Templates/SoCS.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html>
 <head>
 
 <!-- #BeginEditable "doctitle" -->
-<title>School of Computer Science - Dr Steve Vickers</title>
+<title>Dr Steve Vickers</title>
 <!-- #EndEditable -->
-  
-  <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
-    AddSysStylesheets();
-  ?>
-
-  <link href="/sys/style-sheets/sys-styles.css" rel="stylesheet" type="text/css" />
-  <link href="/sys/style-sheets/sys-print.css" rel="stylesheet" type="text/css"
-media="print" />
-<!-- TemplateParam name="title" type="text" value="" -->
-<!-- TemplateParam name="maintainer" type="text" value="" -->
-<!-- TemplateParam name="maintaineremail" type="text" value="" -->
 </head>
 <body>
 
-<?php
-  require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
-
-  SetPageTitle('Steve Vickers: Research');
-  SetMaintainer('Steve Vickers', 'sjv@cs.bham.ac.uk');
-  PageStart()
-?>
-
-<!-- #BeginEditable "content" -->
-
 <ul>
   <li><a href="#topics">Overview of research</a></li>
-  <li><a href="talks.php">Selected talks</a></li>
-  <li><a href="papers.php">Summary of papers</a></li>
-  <li><a href="papersfull.php">More complete list of papers</a>,
+  <li><a href="talks.html">Selected talks</a></li>
+  <li><a href="papers.html">Summary of papers</a></li>
+  <li><a href="papersfull.html">More complete list of papers</a>,
      with citation details, abstracts and downloadable versions</li>
   <li><a href="#PhD">PhDs under my supervision</a></li>
 </ul>
@@ -51,7 +27,7 @@ media="print" />
 <li><a href="#intro">Some of my introductory writings</a></li>
 <li><a href="#technical">More technical issues</a></li>
 <li><a href="#AUs">Arithmetic universes</a></li>
-<li>My EPSRC project <a href="geophysics.php">Applications of geometric logic to topos approaches to quantum theory</a>.</li>
+<li>My EPSRC project <a href="geophysics.html">Applications of geometric logic to topos approaches to quantum theory</a>.</li>
 </ul>
 
 <a name="ptfree"></a>
@@ -89,9 +65,9 @@ Once that is done, we have a <i>logical theory</i>, and the points can now be de
 The logic that must be used, the so-called <i>geometric logic</i>, is a bit unusual, and arises out of Grothendieck's topos theory.
 One illuminating way to view it, which comes out of ideas (Abramsky, Smyth) of the role of topology in computer science, is that it is a logic of what you can actually observe.
 I used that as the basis of my book
-"<a href="papersfull.php#TVL">Topology via Logic</a>"
+"<a href="papersfull.html#TVL">Topology via Logic</a>"
 (also, in more detail, the article
-"<a href="papersfull.php#Ontology">Issues of logic, algebra and topology in ontology</a>").
+"<a href="papersfull.html#Ontology">Issues of logic, algebra and topology in ontology</a>").
 We can now define -
 </p>
 <p>
@@ -217,28 +193,28 @@ particular instances of this question.</p>
 <h3>Some of my introductory writings</h3>
 <ul>
 <li>
-<i><a href="papersfull.php#PtfreePtwise">Generalized point-free spaces, pointwise</a></i> gives a recent (2022) general background account of the ideas, including a discussion of terminology and a use of notation from dependent type theory for variable sets and spaces.
+<i><a href="papersfull.html#PtfreePtwise">Generalized point-free spaces, pointwise</a></i> gives a recent (2022) general background account of the ideas, including a discussion of terminology and a use of notation from dependent type theory for variable sets and spaces.
 </li>
 <li>
-<a href="papersfull.php#LocTopSpaces"><i>Locales and toposes as spaces</i></a> -
+<a href="papersfull.html#LocTopSpaces"><i>Locales and toposes as spaces</i></a> -
 a reader's guide to two of the standard topos introductions, from the point of view
 of geometric logic and points.
 In fact this big chapter is my first stab at writing a constructive version of "Topology via Logic".
 </li>
 <li>
 Two tutorial presentations, for
-<a href="talks.php#TACL2017">TACL 2017</a>, and
-<a href="talks.php#4WFTop">4WFT 2012</a>;
-also <a href="talks.php">various other talks</a>.
+<a href="talks.html#TACL2017">TACL 2017</a>, and
+<a href="talks.html#4WFTop">4WFT 2012</a>;
+also <a href="talks.html">various other talks</a>.
 </li>
 <li>
-<a href="papersfull.php#Ontology"><i>Issues of logic, algebra and topology
+<a href="papersfull.html#Ontology"><i>Issues of logic, algebra and topology
 in ontology</i></a> describes in detail the "observational" ideas underlying first-order geometric logic.
 It expands on the motivation used in
-<a href="papersfull.php#TVL"><i>Topology via Logic</i></a>.
+<a href="papersfull.html#TVL"><i>Topology via Logic</i></a>.
 </li>
 <li>
-<a href="papersfull.php#GeoFuzzy"><i>Fuzzy sets and geometric logic</i></a> -
+<a href="papersfull.html#GeoFuzzy"><i>Fuzzy sets and geometric logic</i></a> -
 includes an introduction to sheaves (variable sets).
 </li>
 <li>
@@ -262,7 +238,7 @@ Hence by reasoning geometrically you cover also these non-standard points, and o
 there are enough.
 <p>
 Many of the ideas are set out in
-<a href="papersfull.php#TCD"><i>Topical categories of domains</i></a>, which investigates
+<a href="papersfull.html#TCD"><i>Topical categories of domains</i></a>, which investigates
 results known from domain theory and the semantics of computer programming languages (in particular, the results of Samson Abramsky's logical approach).
 It uses geometric logic to exploit in a deep way the idea of classifying toposes as
 spaces of points.</p>
@@ -275,7 +251,7 @@ of points rather than a single point.)
 These give a powerful way to discuss issues such as compactness
 and I have used them throughout my work.
 Their good interaction with geometric logic is described in detail in
-<a href="papersfull.php#PPandExp"><i>The double powerlocale and exponentiation</i></a>,
+<a href="papersfull.html#PPandExp"><i>The double powerlocale and exponentiation</i></a>,
 which investigates Martin Hyland's famous result from point-free topology on the ability to construct
 spaces of maps (and, technically, on local compactness).</p>
 
@@ -285,9 +261,9 @@ spaces of maps (and, technically, on local compactness).</p>
 One important consequence of the infinitary disjunctions in geometric logic is that
 there is a "geometric type theory" to go with it.
 An interesting question,
-proposed in <a href="papersfull.php#TCD"><i>Topical categories of domains</i></a>
+proposed in <a href="papersfull.html#TCD"><i>Topical categories of domains</i></a>
 and discussed in
-<a href="papersfull.php#LocTopSpaces"><i>Locales and toposes as spaces</i></a>,
+<a href="papersfull.html#LocTopSpaces"><i>Locales and toposes as spaces</i></a>,
 concerns what happens if one combines some of the type theory with the <i>finitary</i>
 geometric logic, i.e. coherent logic. This is an "arithmetic" logic, and corresponds to
 using Joyal's <i>arithmetic universes</i> as a substitute for
@@ -303,7 +279,7 @@ Grothendieck topos theory might be characterized as
 where the generalization is to spaces of models of non-propositional geometric theories,
 and consequently the point-free approach has to shift
 from lattices (of opens) to categories (of sheaves).
-See my <a href="talks.php#TACL2017">TACL talks</a> 1-4.
+See my <a href="talks.html#TACL2017">TACL talks</a> 1-4.
 </p>
 <p>
 The methodology then is that a space <i>is</i>
@@ -321,7 +297,7 @@ that makes it harder to be foundationally robust.
   a constructive, foundationally robust way
   that does not depend on choosing a base topos
   (or a base anything).
-  See my <a href="talks.php#TACL2017">TACL talks</a> 5.
+  See my <a href="talks.html#TACL2017">TACL talks</a> 5.
 </p>
 <p>
   At present we are a long way from realising that dream
@@ -333,18 +309,18 @@ that makes it harder to be foundationally robust.
 <p>
 See -
 <ul> 
-  <li><a href="papersfull.php#ArithInd">An induction principle
+  <li><a href="papersfull.html#ArithInd">An induction principle
      for consequence in arithmetic universes</a></li>
   <li>
-    <a href="papersfull.php#AUSk">Sketches for arithmetic universes</a>.
+    <a href="papersfull.html#AUSk">Sketches for arithmetic universes</a>.
   </li>
-  <li><a href="papersfull.php#AUClTop">Arithmetic universes
+  <li><a href="papersfull.html#AUClTop">Arithmetic universes
      and classifying toposes</a></li>
 </ul>
 </p>
 <p>
 Also, for a good report on the basic ideas as known in 1996, see Alan Morrison's MSc dissertation
-"<a href="morrisonpage.php">Reasoning in Arithmetic Universes</a>".
+"<a href="morrisonpage.html">Reasoning in Arithmetic Universes</a>".
 </p>
 
 <a name="PhD"></a>
@@ -355,10 +331,5 @@ In principle, as an honorary member of staff, I can still supervise PhD students
 </p>
 
 
-
-<!-- #EndEditable -->
-
-<?php PageEnd(); ?>
 </body>
-<!-- InstanceEnd -->
 </html>

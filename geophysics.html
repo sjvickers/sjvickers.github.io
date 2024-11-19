@@ -1,36 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<!-- InstanceBegin template="/Templates/SoCS.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html>
 <head>
 
 <!-- #BeginEditable "doctitle" -->
-<title>School of Computer Science - Dr Steve Vickers</title>
+<title>Dr Steve Vickers</title>
 <!-- #EndEditable -->
   
-  <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
-    AddSysStylesheets();
-  ?>
-
-  <link href="/sys/style-sheets/sys-styles.css" rel="stylesheet" type="text/css" />
-  <link href="/sys/style-sheets/sys-print.css" rel="stylesheet" type="text/css"
-media="print" />
-<!-- TemplateParam name="title" type="text" value="" -->
-<!-- TemplateParam name="maintainer" type="text" value="" -->
-<!-- TemplateParam name="maintaineremail" type="text" value="" -->
 </head>
 <body>
 
-<?php
-  require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
-
-  SetPageTitle('Steve Vickers: GeoPhysics');
-  SetMaintainer('Steve Vickers', 'sjv@cs.bham.ac.uk');
-  PageStart()
-?>
-
-<!-- #BeginEditable "content" -->
 
 <h1>Applications of geometric logic to topos approaches to quantum theory</h1>
 <p>
@@ -91,7 +69,7 @@ other.</p>
 <p>
 Starting around 1998, physicist Prof. Chris Isham (at Imperial College)
 and philosopher Jeremy Butterfield investigated applying
-<a href="research.php#toposes">topos theory</a>
+<a href="research.html#toposes">topos theory</a>
 to describing quantum systems. Their idea can be summarized roughly as follows.</p>
 <p>
 A quantum system is described by the measurements that can be made on it.
@@ -110,7 +88,7 @@ A famous theoretical result - the Kochen-Specker Theorem - asserts this.</p>
 <p>
 The topos trick is to take a space B whose points are the contexts,
 and then to use the topos of sheaves over B. The
-<a href="research.php#bundles">stalks</a>
+<a href="research.html#bundles">stalks</a>
 at a given point are then what one sees from that point of view.
 In the internal mathematics of sheaves, the physics can be understood classically.
 The "neo-realist" strategy of Isham and Butterfield is to work classically in that
@@ -139,7 +117,7 @@ Landsman.
 <h2>Using geometric logic</h2>
 <p>
 My project at Birmingham investigated the applications of
-<a href="research.php#geolog">geometric logic</a>
+<a href="research.html#geolog">geometric logic</a>
 to this topos approach.</p>
 <p>
 A central technique covering both Imperial and Nijmegen approaches is that, rather than using a topos equipped with certain extra structure, it is mathematically equivalent to use a bundle. The bundle is rather easier to visualize, and geometric logic provides a means of dealing with the bundle in a natural, "fibrewise" way while at the same time respecting the structure of the topos.</p>
@@ -159,14 +137,14 @@ The EPSRC project ran for 3 years, starting September 2009. It included funding 
 <h2>Results</h2>
 <p>
 The key results obtained in the project are summarized in
-"<a href="papersfull.php#BornQPL">The Born rule as structure of spectral bundles</a>", together with a description of how the bundles
+"<a href="papersfull.html#BornQPL">The Born rule as structure of spectral bundles</a>", together with a description of how the bundles
 work and how geometric reasoning is applied.</p>
 <p>
 Here are the main results.
 <ol>
 <li>Within geometric logic it is possible to develop topos approaches that take fuller account of the topology of the system, and particularly of some manifolds embedded in it, than do the established approaches. Raynaud is currently writing up his PhD thesis to realise these in the case of finite dimensional quantum systems. This includes generalizing some known techniques from geometric point-free topology.</li>
 <li>
-A certain "valuation locale" construction on spaces and bundles is already known to be important for incorporating probability and integration into the bundles, as needed for quantum physics. In <a href="papersfull.php#Riesz">A monad
+A certain "valuation locale" construction on spaces and bundles is already known to be important for incorporating probability and integration into the bundles, as needed for quantum physics. In <a href="papersfull.html#Riesz">A monad
   of valuation locales</a> Vickers has developed the theory of the valuation locales, stressing their geometricity, and proving for them analogues of the Fubini and Riesz theorems for measure and integration.</li>
 <li>
 We have shown that the bundles that arise from the Imperial and Nijmegen topos approaches, as well as new proposed approaches, can be classified as either "fibrations" or "opfibrations", two very general notions that arise in the mathematical theory of 2-categories.
@@ -174,7 +152,7 @@ In "Geometric constructions preserving (op)fibrations"
 (in preparation), Fauser and Vickers show that these two properties of bundles are preserved by bundle constructions that are geometric (in the sense of geometric logic), and that includes the valuation locale. This suggests the topos approaches as currently understood can be classified either as ones in which all the bundles that arise are fibrations, or they they are all opfibrations. This casts some light on some technical aspects of the approaches.</li>
 <li>
 Some proposals have been indicated in
-<a href="papersfull.php#BornQPL">the main paper</a> for representing the Born rule (which calculates probabilities in a quantum system) in terms of the spectral bundle and valuation locale.</li>
+<a href="papersfull.html#BornQPL">the main paper</a> for representing the Born rule (which calculates probabilities in a quantum system) in terms of the spectral bundle and valuation locale.</li>
 <li>
 The work has shown how important it is that geometric logic can deal with bundles in its fibrewise way. It shows the need to examine geometric logic in other uses of bundles, such as tangent bundles in differential geometry.</li>
 </ol>
@@ -205,14 +183,10 @@ Heunen, Landsman and Spitters (2008), <i>A Topos for Algebraic Quantum Theory</i
 <a href="http://arxiv.org/pdf/0709.4364">arXiv:0709.4364v2</a></p>
 <p>
 You can also see or hear various talks on this and related work
-<a href="talks.php">by Vickers</a> and
+<a href="talks.html">by Vickers</a> and
 <a href="http://www.cs.bham.ac.uk/~fauserb/talks.html">by Fauser</a>.
 </p>
 
 
-<!-- #EndEditable -->
-
-<?php PageEnd(); ?>
 </body>
-<!-- InstanceEnd -->
 </html>
