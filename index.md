@@ -16,6 +16,6 @@
 <p class="p1"><span class="s1">Hello World!</span></p>
 <p class="p1"><span class="s1">=====</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">This is Steve Vickers’s home page, under construction on Github Pages.</span></p>
+<p class="p1"><span class="s1">This is Steve Vickers’s home page on Github Pages. At present it is under construction.</span></p>
 </body>
 </html>
