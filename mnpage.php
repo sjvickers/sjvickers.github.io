@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- InstanceBegin template="/Templates/SoCS.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+<!-- #BeginEditable "doctitle" -->
+<title>School of Computer Science - Dr Steve Vickers</title>
+<!-- #EndEditable -->
+  
+  <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+    AddSysStylesheets();
+  ?>
+
+  <link href="/sys/style-sheets/sys-styles.css" rel="stylesheet" type="text/css" />
+  <link href="/sys/style-sheets/sys-print.css" rel="stylesheet" type="text/css"
+media="print" />
+<!-- TemplateParam name="title" type="text" value="" -->
+<!-- TemplateParam name="maintainer" type="text" value="" -->
+<!-- TemplateParam name="maintaineremail" type="text" value="" -->
+
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script> 
+</head>
+<body>
+
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+
+  SetPageTitle('PhD students of Steve Vickers: Ming Ng');
+  SetMaintainer('Steve Vickers', 'sjv@cs.bham.ac.uk');
+  PageStart()
+?>
+
+<!-- #BeginEditable "content" -->
+
+<p>Ming Ng completed his PhD thesis
+"<a href="NgPhD.pdf">Adelic Geometry via Topos Theory</a>"
+in 2022 at the School of Computer Science, University of Birmingham, under <a href="index.php">my</a>  supervision.</p>
+<p>
+Some of the results have been written up as papers,
+"<a href="papersfull.php#ExpLog">Point-free construction of real exponentiation</a>".
+
+
+<h3>
+THESIS ABSTRACT</h3>
+
+<h4>
+"Adelic Geometry via Topos Theory"</h4>
+<p>
+PhD Thesis, School of Computer Science, University of Birmingham, 2022. 324 pages.</p>
+<p>
+Summary</p>
+<p>
+Our starting point has to do with a key tension running through number theory: although all completions of
+the rationals Q should be treated symmetrically, this is complicated by fundamental disanalogies between
+the p-adics vs. the reals. Whereas prior work has typically been guided by classical point-set reasoning, this
+thesis explores various ways of pulling this problem away from the underlying set theory, revealing various
+surprises that are obscured by the classical perspective. Framing these investigations is the following test
+problem: construct and describe the topos of completions of Q (up to equivalence).
+</p><p>
+Chapter 2 begins with the preliminaries: we set up the topos-theoretic framework of point-free topology,
+with a view towards highlighting the distinction between classical vs. geometric mathematics, before introducing
+the number-theoretic context. A key theme is that geometric mathematics possesses an intrinsic
+continuity, which forces us to think more carefully about the topological character of classical algebraic
+constructions.
+</p><p>
+Chapter 3 represents the first step towards constructing the topos of completions. Here, we provide a pointfree
+account of real exponentiation and logarithms, which will allow us to define the equivalence of completions
+geometrically. Chapter 4 provides a geometric proof of Ostrowski's Theorem for both upper-valued
+abosolute values on Z as well as Dedekind-valued absolute values on Q, along with some key insights about
+the relationship between the multiplicative seminorms and upper reals.
+</p><p>
+In a slightly more classical interlude, Chapter 5 extends these insights to obtain a surprising generalisation
+of a foundational result in Berkovich geometry. Namely, by replacing the use of classical rigid discs with
+formal balls, we obtain a classification of the points of Berkovich Spectra M(K{R^{-1}T}) via the language
+of filters [more precisely, what we call: R-good filters] even when the base field K is trivially-valued.
+</p><p>
+Returning to geometricity, Chapter 6 builds upon Chapters 3 and 4 to investigate the space of places of Q
+via descent arguments. Here, we uncover an even deeper surprise. Although the non-Archimedean places
+correspond to singletons (as is classically expected), the Archimedean place corresponds to the subspace
+of upper reals in [0, 1], a sort of blurred unit interval. The chapter then analyses the topological differences
+between the non-Archimedean vs. Archimedean places. In particular, we discover that while the topos corresponding
+to Archimedean place witnesses non-trivial forking in the connected components of its sheaves,
+the topos corresponding to the non-Archimedean place eliminates all kinds of forking phenomena. We then
+conclude with some insights and observations, framed by the question: "How should the connected and the
+disconnected interact?"
+</p>
+
+
+
+<!-- #EndEditable -->
+
+<?php PageEnd(); ?>
+</body>
+<!-- InstanceEnd -->
+</html>

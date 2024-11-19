@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- InstanceBegin template="/Templates/SoCS.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+<!-- #BeginEditable "doctitle" -->
+<title>School of Computer Science - Dr Steve Vickers</title>
+<!-- #EndEditable -->
+  
+  <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+    AddSysStylesheets();
+  ?>
+
+  <link href="/sys/style-sheets/sys-styles.css" rel="stylesheet" type="text/css" />
+  <link href="/sys/style-sheets/sys-print.css" rel="stylesheet" type="text/css"
+media="print" />
+<!-- TemplateParam name="title" type="text" value="" -->
+<!-- TemplateParam name="maintainer" type="text" value="" -->
+<!-- TemplateParam name="maintaineremail" type="text" value="" -->
+</head>
+<body>
+
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+
+  SetPageTitle('Steve Vickers: GeoPhysics');
+  SetMaintainer('Steve Vickers', 'sjv@cs.bham.ac.uk');
+  PageStart()
+?>
+
+<!-- #BeginEditable "content" -->
+
+<h1>Applications of geometric logic to topos approaches to quantum theory</h1>
+<p>
+This EPSRC-funded project ran from 2009 - 2012 with Dr Bertfried Fauser as Research Fellow and Guillaume Raynaud on a PhD studentship.</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#summary">Summary of programme</a></li>
+<li><a href="#quantum">Background: quantum physics</a></li>
+<li><a href="#topos">Background: the topos approach</a></li>
+<li><a href="#geolog">Using geometric logic</a></li>
+<li><a href="#people">Research Group</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#refs">References</a></li>
+</ul>
+
+<a name="summary"></a>
+<h2>Summary of programme</h2>
+<p>
+A deep mystery of quantum physics is its inherent non-determinism. The outcome of a measurement on a quantum system has a randomness that cannot be explained away as representing just our uncertain knowledge of what precise state the system is in. Technically (the Kochen-Specker Theorem), there is mathematically no possibility in most quantum systems of describing "classical" states that consistently, and unequivocally, say what value every possible measurement would give.</p>
+<p>
+One approach to understanding this is the "neo-realism" of Isham at Imperial College, recently with Doering, and taken up also by Landsman, Spitters and Heunen at Nijmegen. There are ways of seeing the system classically (with classical states), but none describes all possible measurements and they cannot be fitted together coherently. Isham's insight is that the resulting logic of systems, which varies according to which classical viewpoint is adopted, can be described overall as a non-standard "internal" logic arising out of a mathematical structure known as a topos - comprising the sheaves over a base space whose points in these quantum applications include those classical viewpoints. Now logic asks not "whether" something is true, but "where" - from which points of view. In the non-standard logic, the quantum system appears classical and has classical states. Withdrawing to standard logic, however, the classical states cannot consistently be retained - although their probabilistic distributions can and these are what we see in quantum physics.</p>
+<p>
+The internal logic - and corresponding mathematics - of toposes can be difficult to work with. Some standard principles don't work. Also, the usual "point-set" idea of topological space (a set of points together with some subsets specified as "open") must be replaced by a "point-free" approach that describes the opens independently of points. The points are constructed subsequently, although there may be too few of them for the opens to be uniquely distinguished by their points. It was developed in pure mathematics, has been found to give excellent results with a range of non-standard logics, and has also been applied in computer science, with the opens related to theories of observations on computer programs.</o>
+<p>
+Working with the point-free topologies directly in the internal logic is technical and difficult. However (Joyal/Tierney), they can equivalently be viewed as point-free "bundles" over the base space - that is to say, maps from another space to the base. In referring to a map as a bundle, one is thinking of it as a variable space - for each point of the base, we have a fibre over it, the inverse image of that point under the map, and as the point varies so too does its fibre.</p>
+<p>
+Ideally, our internal reasoning about internal point-free spaces should also apply to the fibres, but this true only for a certain "geometric" fragment of the internal logic. Technically, the geometric constructions on the bundles are those that are preserved by bundle pullback, and this covers the fibres. By careful interpretation of logic, geometric reasoning also can work validly through the points of the point-free spaces, despite the possible shortage of them. Techniques of geometric reasoning have been developed by the proposer, with particular exploitation of "powerlocales" (point-free hyperspaces, or spaces of spaces).</p>
+<p>
+The project aims to exploit those geometricity techniques in the topos approach to quantum physics, reexpressing it in terms of more familiar topological concepts - points, bundles, fibres - instead of internal point-free spaces. The goal is to make the topos approach more accessible to physicists and help clarify its relationship with other physics formalisms. It is also an excellent case study for testing out the general mathematical scope of geometricity.</p>
+
+<a name="quantum"></a>
+<h2>Background: quantum physics</h2>
+<p>
+It was discovered in the 20th century that microscopic
+physical systems have an inevitably probabilistic aspect.
+Under the preceeding "classical" understanding of physics, any physical
+quantity is determined completely by a well-defined underlying state of the
+system. In quantum systems this is no longer so.
+The underlying state deternines only the range of possible values for a quantity, and
+the probabilities of obtaining them as the result of a measurement.</p>
+<p>
+In itself, the probabilistic aspect itself is not so new. Even classical physics is
+used to getting probabilities arising from uncertainty and lack of knowledge.
+But it assumes that fully known states are possible, at least in principle,
+and that the probabilities represent statistical distributions over those.</p>
+<p>
+In quantum physics both theory and experiment indicate that this cannot be.
+Threre are no deterministic states underlying the probabilistic ones.
+The problem comes to a head with quantities that are in some sense incompatible
+with each other, such as position and momentum: Heisenberg's uncertainty principle
+says that the more certainty there is for one, the less certainty there can be
+for the other. Technically, quantities are compatible if they "commute" with each
+other.</p>
+
+<a name="topos"></a>
+<h2>Background: the topos approach</h2>
+<p>
+Starting around 1998, physicist Prof. Chris Isham (at Imperial College)
+and philosopher Jeremy Butterfield investigated applying
+<a href="research.php#toposes">topos theory</a>
+to describing quantum systems. Their idea can be summarized roughly as follows.</p>
+<p>
+A quantum system is described by the measurements that can be made on it.
+Some of those (like the complementary quantities of position and momentum) may be
+non-commuting, so there is no underlying state that completely describes the
+values of all those measurable quantities.
+However, if one restricts to a commuting subset of
+the quantities then there are such states.</p>
+<p>
+Isham and Butterfield think of such a commuting subset of quantities as a <i>context,</i> a
+"classical point of view". Viewing the system only through those quantities,
+it is still possible to think classically, and get a <i>Gelfand-Naimark spectrum</i>
+of states for those quantities. But it is impossible to reconcile those
+different points of view to get states that cover all the quantities at the same time.
+A famous theoretical result - the Kochen-Specker Theorem - asserts this.</p>
+<p>
+The topos trick is to take a space B whose points are the contexts,
+and then to use the topos of sheaves over B. The
+<a href="research.php#bundles">stalks</a>
+at a given point are then what one sees from that point of view.
+In the internal mathematics of sheaves, the physics can be understood classically.
+The "neo-realist" strategy of Isham and Butterfield is to work classically in that
+internal mathematics (this is classical <i>physics</i>, not classical <i>logic</i> -
+the internal logic of a topos is normally non-classical), and then extract it to
+give external results.</p>
+<p>
+They showed that in this way of thinking, the Kochen-Specker Theorem says that
+the internal spectra have no cross-sections:
+it is impossible to consistently choose a spectrum point for every classical point of
+view.
+However, there <i>are</i> cross-sections for statistical distributions
+of spectrum points, and these cross-sections come out as
+the non-deterministic quantum states already known about.</p>
+<p>
+To summarize: the non-deterministic quantum states <i>are</i> statistical
+distributions of deterministic states, but only if you work internally in a topos.
+It is hoped that this internal working, though logically non-classical, can be
+made physically classical.</p>
+<p>
+Since the original Isham-Butterfield work, the idea has been developed by two groups:
+by Isham himself, with Andreas D&ouml;ring; and a group at Nijmegen led by Klaas
+Landsman.
+
+<a name="geolog"></a>
+<h2>Using geometric logic</h2>
+<p>
+My project at Birmingham investigated the applications of
+<a href="research.php#geolog">geometric logic</a>
+to this topos approach.</p>
+<p>
+A central technique covering both Imperial and Nijmegen approaches is that, rather than using a topos equipped with certain extra structure, it is mathematically equivalent to use a bundle. The bundle is rather easier to visualize, and geometric logic provides a means of dealing with the bundle in a natural, "fibrewise" way while at the same time respecting the structure of the topos.</p>
+<p>
+Physically, the idea is to start from a bundle where the base space is one of contexts, and that the bundle space is got by bundling together the spectra. Quantum physics arises because the different contexts are not all consistent with each other. This suggests that the impact of the topos approach in quantum physics should be that one pays much greater attention to the contexts, though it is still not clear how to do this.</p>
+<p>
+Much of the hard work is to see whether geometric logic is in fact strong enough to cover the topos-quantum work.
+So while one purpose of the project is to aid that work, another is to test out the power of geometric logic, how much serious mathematics it can cover.
+</p>
+
+<a name="people"></a>
+<h2>Research Group</h2>
+<p>
+The EPSRC project ran for 3 years, starting September 2009. It included funding for Dr Bertfried Fauser as Research Fellow, and Guillaume Raynaud as PhD student.</p>
+
+<a name="results"></a>
+<h2>Results</h2>
+<p>
+The key results obtained in the project are summarized in
+"<a href="papersfull.php#BornQPL">The Born rule as structure of spectral bundles</a>", together with a description of how the bundles
+work and how geometric reasoning is applied.</p>
+<p>
+Here are the main results.
+<ol>
+<li>Within geometric logic it is possible to develop topos approaches that take fuller account of the topology of the system, and particularly of some manifolds embedded in it, than do the established approaches. Raynaud is currently writing up his PhD thesis to realise these in the case of finite dimensional quantum systems. This includes generalizing some known techniques from geometric point-free topology.</li>
+<li>
+A certain "valuation locale" construction on spaces and bundles is already known to be important for incorporating probability and integration into the bundles, as needed for quantum physics. In <a href="papersfull.php#Riesz">A monad
+  of valuation locales</a> Vickers has developed the theory of the valuation locales, stressing their geometricity, and proving for them analogues of the Fubini and Riesz theorems for measure and integration.</li>
+<li>
+We have shown that the bundles that arise from the Imperial and Nijmegen topos approaches, as well as new proposed approaches, can be classified as either "fibrations" or "opfibrations", two very general notions that arise in the mathematical theory of 2-categories.
+In "Geometric constructions preserving (op)fibrations"
+(in preparation), Fauser and Vickers show that these two properties of bundles are preserved by bundle constructions that are geometric (in the sense of geometric logic), and that includes the valuation locale. This suggests the topos approaches as currently understood can be classified either as ones in which all the bundles that arise are fibrations, or they they are all opfibrations. This casts some light on some technical aspects of the approaches.</li>
+<li>
+Some proposals have been indicated in
+<a href="papersfull.php#BornQPL">the main paper</a> for representing the Born rule (which calculates probabilities in a quantum system) in terms of the spectral bundle and valuation locale.</li>
+<li>
+The work has shown how important it is that geometric logic can deal with bundles in its fibrewise way. It shows the need to examine geometric logic in other uses of bundles, such as tangent bundles in differential geometry.</li>
+</ol>
+</p>
+
+<a name="exploitation"></a>
+<h2>Exploitation</h2>
+<p>
+The physicists who initiated the topos approach (pioneered by Prof. Chris Isham at Imperial College) were looking for new handles on how to understand the logical structure of quantum physics. The reason for wanting this is the great scandal of 20th century physics, that its two great revolutions - relativity and quantum physics - are both accurate to an extraordinary degree, yet inconsistent with each other. A theory of quantum gravity would need to reconcile them. The hope is that the topos approach might give clues on the logical constraints within which quantum physics has to work, and so help show how it might be refounded in a way that is reconcilable with relativity.</p>
+<p>
+The current project does not claim to be achieving quantum gravity, but it does provide ways to make the toposes easier to visualize and calculate and so should help others understand
+what the topos approach can do.
+Thus the route to exploitation is by continued contact with the the topos part of the physics community, in order to disseminate the techniques.
+In fact in December 2012, after the end of the project, one of us (Vickers) presented some of the results at the 1st Workshop on Quantum Toposophy at Nijmegen in the Netherlands.</p>
+<p>
+A quite different direction of exploitation is that, as a case study in geometric logic, the quantum work has highlighted some of the key attributes of geometric logic: its ability to realise a fibrewise topology of bundles. This provides a sharp focus for continuing work on geometric logic, and in particular the idea of using it in a "dependent type theory" of spaces.</p>
+
+
+<a name="refs"></a>
+<h2>References</h2>
+<p>
+D&ouml;ring and Isham,
+<i>'What is a thing?': Topos theory in the foundations of physics</i> (2008),
+<a href="http://arxiv.org/pdf/0803.0417">arXiv:0803.0417v1</a>;
+to appear in "New Structures in Physics".</p>
+<p>
+Heunen, Landsman and Spitters (2008), <i>A Topos for Algebraic Quantum Theory</i>,
+<a href="http://arxiv.org/pdf/0709.4364">arXiv:0709.4364v2</a></p>
+<p>
+You can also see or hear various talks on this and related work
+<a href="talks.php">by Vickers</a> and
+<a href="http://www.cs.bham.ac.uk/~fauserb/talks.html">by Fauser</a>.
+</p>
+
+
+<!-- #EndEditable -->
+
+<?php PageEnd(); ?>
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- InstanceBegin template="/Templates/SoCS.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+<!-- #BeginEditable "doctitle" -->
+<title>School of Computer Science - Dr Steve Vickers</title>
+<!-- #EndEditable -->
+  
+  <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+    AddSysStylesheets();
+  ?>
+
+  <link href="/sys/style-sheets/sys-styles.css" rel="stylesheet" type="text/css" />
+  <link href="/sys/style-sheets/sys-print.css" rel="stylesheet" type="text/css"
+media="print" />
+<!-- TemplateParam name="title" type="text" value="" -->
+<!-- TemplateParam name="maintainer" type="text" value="" -->
+<!-- TemplateParam name="maintaineremail" type="text" value="" -->
+</head>
+<body>
+
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+
+  SetPageTitle('PhD students of Steve Vickers: Christopher Townsend');
+  SetMaintainer('Steve Vickers', 'sjv@cs.bham.ac.uk');
+  PageStart()
+?>
+
+<!-- #BeginEditable "content" -->
+
+<p>
+<a href="http://www.christophertownsend.org/">Christopher Townsend</a> -</p>
+
+<ul>
+<li>
+completed his PhD thesis "Preframe Techniques in Constructive Locale Theory"
+in 1996 at the Department of Computing, Imperial College, under
+<a href="index.html">my</a>  supervision.
+Click for <a href="#PrefrTCLT">abstract</a>
+or full text (<a href="townsend.ps">ps</a>, <a href="townsend.pdf">pdf</a>).</li>
+<li>
+wrote a paper "Localic Priestley duality" based on some of the ideas.
+(<a href="#LocPD">Abstract only</a> available here.)</li>
+<li>
+worked with <a href="index.html">me</a> at the Open University, where we wrote
+"<a href="VicTownUniCharPP.pdf">A universal
+characterization of the double powerlocale</a>".</li>
+<li>has published numerous <a href="http://www.christophertownsend.org/publications.htm">other papers</a>.
+</ul>
+
+<h3>
+ABSTRACTS</h3>
+
+<h4>
+<a NAME="PrefrTCLT"></a>"Preframe Techniques in Constructive Locale Theory"</h4>
+<p>
+PhD Thesis, Department of Computing, Imperial College, 1996. 158 pages.</p>
+<p>Our work is entirely constructive; none of the mathematics developed
+uses the excluded middle or any choice axioms. No use is made of a natural
+numbers object.</p>
+<p>
+We get a glimpse of the parallel between the preframe approach and the
+SUP-lattice approach to locale theory by developing the preframe coverage
+theorem and the SUP-lattice coverage theorem side by side and as examples
+of a generalized coverage theorem.</p>
+<p>
+Proper locale maps and open locale maps are defined and seen to be <i>parallel</i>.
+We argue that the compact regular locales are parallel to the discrete
+locales. It is an examination of this parallel that is the driving force
+behind the thesis.</p>
+<p>
+We proceed with examples: relational composition in <b>Set</b> can be
+expressed as a statement about discrete locales; we then appeal to our
+parallel and examine relational composition of closed relations of compact
+regular locales. A technical achievement of the thesis is the discovery
+of a preframe formula for this relational composition.</p>
+<p>
+We use this formula to investigate ordered compact regular locales (where
+the order is required to be closed). We find that Banaschewski and Bruemmer's
+compact regular biframes (<i>Stably continuous frames</i> [Math. Proc.
+Camb. Phil. Soc. (1988) <b>104</b> 7-19]) are equivalent to the compact
+regular posets with closed partial order. We also find that the ordered
+Stone locales are equivalent to the coherent locales. This is a localic,
+and so constructive, version of Priestley's duality.</p>
+<p>
+Further, using this relational composition, we can define the Hausdorff
+systems as the proper parallel to Vickers' continuous information systems
+(<i>Information systems for continuous posets</i> [Theoretical Computer
+Science <b>114</b> (1993) 201-229]) The category of continuous information
+systems is shown by Vickers to be equivalent to the (constructively) completely
+distributive lattices; we prove the proper parallel to this result which
+is that the Hausdorff systems are equivalent to the stably locally compact
+locales. This last result can be viewed as an extension of Priestley's
+duality.</p>
+<hr>
+<h4>
+<a NAME="LocPD"></a>"Localic Priestley Duality"</h4>
+<p>
+Journal of Pure and Applied Algebra <b>116</b> (1997) 323-335.</p>
+<p>
+Given the category <b>OStoneSp </b>of ordered Stone spaces (as introduced
+by Priestley, 1970) and the category <b>CohSp</b> of coherent spaces (=
+spectral spaces) one can construct a pair of functors between them which
+Priestley (1970) has shown, using the prime ideal theorem, define an equivalence.
+<p>In this paper we define ordered Stone locales. These are classically
+just the ordered Stone spaces. It is well known that the localic analogue
+of the coherent spaces is the category of coherent locales. We prove, entirely
+constructively, that the category of coherent locales is equivalent to
+the category of ordered Stone locales.
+
+
+<!-- #EndEditable -->
+
+<?php PageEnd(); ?>
+</body>
+<!-- InstanceEnd -->
+</html>

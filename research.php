@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- InstanceBegin template="/Templates/SoCS.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+
+<!-- #BeginEditable "doctitle" -->
+<title>School of Computer Science - Dr Steve Vickers</title>
+<!-- #EndEditable -->
+  
+  <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+    AddSysStylesheets();
+  ?>
+
+  <link href="/sys/style-sheets/sys-styles.css" rel="stylesheet" type="text/css" />
+  <link href="/sys/style-sheets/sys-print.css" rel="stylesheet" type="text/css"
+media="print" />
+<!-- TemplateParam name="title" type="text" value="" -->
+<!-- TemplateParam name="maintainer" type="text" value="" -->
+<!-- TemplateParam name="maintaineremail" type="text" value="" -->
+</head>
+<body>
+
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/sys/includes/wwwlib.php");
+
+  SetPageTitle('Steve Vickers: Research');
+  SetMaintainer('Steve Vickers', 'sjv@cs.bham.ac.uk');
+  PageStart()
+?>
+
+<!-- #BeginEditable "content" -->
+
+<ul>
+  <li><a href="#topics">Overview of research</a></li>
+  <li><a href="talks.php">Selected talks</a></li>
+  <li><a href="papers.php">Summary of papers</a></li>
+  <li><a href="papersfull.php">More complete list of papers</a>,
+     with citation details, abstracts and downloadable versions</li>
+  <li><a href="#PhD">PhDs under my supervision</a></li>
+</ul>
+
+
+<a name="topics"></a>
+<h1>Overview of research</h1>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#ptfree">Point-free topology</a></li>
+<li><a href="#intro">Some of my introductory writings</a></li>
+<li><a href="#technical">More technical issues</a></li>
+<li><a href="#AUs">Arithmetic universes</a></li>
+<li>My EPSRC project <a href="geophysics.php">Applications of geometric logic to topos approaches to quantum theory</a>.</li>
+</ul>
+
+<a name="ptfree"></a>
+<a name="geolog"></a>
+<a name="toposes"></a>
+<a name="bundles"></a>
+<h2>Point-free topology</h2>
+<p>
+What makes a map f: X -> Y <i>continuous</i>?
+That means that if you jiggle the argument x around a little - not too much - to neighbouring points, then the result f(x) won't make any sudden jumps.
+Obviously, to make that precise, you have to give more meaning to "jiggle around" and "neighbouring".
+</p>
+<p>
+Most mathematicians say that you take a set like X and then specify that some subsets are "open".
+This means that every element of the open subset also has some jiggle room around it, still within the open subset.
+The structure of X, together with the specification of which subsets are open, is then a <i>point-set topological space</i>.
+Once both X and Y have that structure, continuity means that for each open subset V containing f(x), there is some jiggle room round x within which the result is still in V; and this is witnessed by an open subset U containing x and with f(U) included in V.
+</p>
+<p>
+This definition has been broadly accepted through most of the 20th century, but since perhaps the 60s there has been growing recognition of problems with taking X and Y as <i>sets</i> equipped with extra structure.
+In a mathematics founded on set theory, the default assumption is that all collections are sets (with the exception of some, proper classes, that are known to be "too big").
+However, this becomes much more delicate if you want to consider "variable sets" X(z), parametrized by points z of some other topological space Z.
+Obviously it would be nice to just "do topology" with these, by sprinkling parameters z everywhere, but that doesn't really work with the point-set definition.
+The problem is that there are variable <i>spaces</i> we should like to capture that don't have satisfactory variable <i>sets</i> for their points.
+</p>
+<p>
+A solution is provided by <i>point-free</i> topology.
+Here we don't assume that the collection of points X can be represented satisfactorily as a set.
+In fact we don't assume it is known until we have described the topology.
+The way this works is to consider each open U not as a set of points, but as a logical property "x in U" that is meaningful for the points (whatever the points are).
+In this style, some interactions between the opens, which previously were implicit in the knowledge of what the points were, have to be stated explicitly as logical axioms.
+Once that is done, we have a <i>logical theory</i>, and the points can now be defined as its models.
+</p>
+<p>
+The logic that must be used, the so-called <i>geometric logic</i>, is a bit unusual, and arises out of Grothendieck's topos theory.
+One illuminating way to view it, which comes out of ideas (Abramsky, Smyth) of the role of topology in computer science, is that it is a logic of what you can actually observe.
+I used that as the basis of my book
+"<a href="papersfull.php#TVL">Topology via Logic</a>"
+(also, in more detail, the article
+"<a href="papersfull.php#Ontology">Issues of logic, algebra and topology in ontology</a>").
+We can now define -
+</p>
+<p>
+<i>A point-free topological space is a geometric theory. Its points are the models of that theory.</i>
+</p>
+<p>
+A key aspect of this is that the theory may be a first-order theory. This insight lies right at the heart of topos theory, because the same definition then admits some point-free spaces, the toposes, that vastly generalize the old point-set ones.
+For example, the class of sets becomes a point-free space (the "object classifier").
+The geometric logic then gives rise to a geometric <i>mathematics</i>, and it turns out that continuity depends on restricting oneself to that geometric mathematics.
+</p>
+<p>
+<i>A continuous map from X to Y is a construction, within geometric mathematics, of points of Y out of points of X.</i>
+</p>
+<p>
+Much mathematics has already been accomplished in this geometric style.
+How much more can be done, and in particular how much topos theory, is still an open question that invites further exploration.
+</p>
+
+<!--
+<p>
+"Geometric logic", so-called from its origins in algebraic geometry
+in the mid 20th century, is an ingenious way to combine two apparently
+very different mathematical subjects:
+<i>topology</i> (which studies continuous change) and <i>logic</i> (which
+studies discrete deduction steps).</p>
+<p>
+Its trick is to take the set-theoretic operations of intersection and (possibly
+infinite) union, which are used to combine the important <i>open sets</i>
+of topology, and reinterpret them as logic. Intersection becomes "and",
+and union becomes "or". Because it has a restricted range of logical connectives
+it is weaker than the standard "classical" logic of mathematics,
+though the ability to form
+"infinite ors" gives it some interesting features.</p>
+<p>
+Under this translation, topological spaces, their points,
+and continuous maps between the spaces become logical theories, models and interpretations
+of one theory in another.</p>
+<p>
+The trick of geometric logic arose in fields of pure mathematics, notably algebraic
+geometry, and led to some interesting "point-free" styles of topology, in which
+the open sets on a space are defined without knowing in advance what points they are
+meant to be sets of. The idea has also been used in computer science, where the idea
+of continuity turns out to be unexpectedly close to that of <i>computability</i>.
+Then the point-free approach describes spaces of computational objects by logical
+theories of "how those objects appear to the user" (i.e. what you can know of
+them by watching them run, as opposed to examining their programs).</p>
+
+<a name="toposes"></a>
+<h3>Toposes</h3>
+<p>
+In essence the trick of geometric logic is a simple one, but it has deep consequences.
+These arise because the weaker, geometric, logic goes along with a weaker, geometric,
+mathematics, one that
+is more compatible with what can be computed. Its constructions have an intrinsic
+continuity - its weakness is that it cannot do <i>dis</i>continuous things.
+The study of what can be done in this geometric mathematics leads to the notion
+of <i>topos</i>.</p>
+<p>
+Topos theory is an astonishingly rich subject dating back to Grothendieck's work on
+algebraic geometry half a century ago. It has had a profound effect on other fields
+too, including logic.
+Partly because of this richness it is notoriously difficult to give a comprehensive
+conceptual account of what a topos is, but I shall try to explain the way I think of
+those aspects that enter into my own work.</p>
+<p>
+A topos is analogous to a topological space, but its topological structure cannot
+be described just using open sets of points. Instead, they must be described by
+specifying what are the <i>sheaves</i>, or continuous maps from the points to <i>sets</i>.
+The sheaves are equivalent to the ways of constructing sets from points in the
+geometric mathematics. This creates a powerful connection between geometric logic
+and toposes.</p>
+<p>
+A topos is generally said to <i>classify</i> its points, so for example there is
+a topos that classifies sets, and another that classifies groups.</p>
+<p>
+Toposes can also be understood independently of geometric logic, via another
+"intuitionistic" logic that is stronger than geometric, but still weaker than
+classical logic. However, restricting to geometric logic makes it much easier
+to understand toposes as spaces of points. Much of my work has studied
+the question of how much
+practical mathematics can be done within the constraints of geometric logic.</p>
+
+<a name="bundles"></a>
+<h3>Sheaves and bundles</h3>
+<p>
+I said above that a <i>sheaf</i> over a space <i>X</i> can be understood as
+a continuous map from points of <i>X</i> to sets. The result of this map applied
+to a point <i>x</i> is called the <i>stalk</i> of the sheaf at <i>x</i>; it is a set.
+By putting together all the elements of all the stalks one gets another space <i>Y</i>,
+called the <i>display space</i>, with a map <i>p</i>: <i>Y</i> -> <i>X</i> that shows,
+for each element of <i>Y</i>, which stalk it comes from.</p>
+<p>
+A map <i>p</i> got in this way is of a special kind, called a <i>local homeomorphism</i>. Thus in a local homeomorphism <i>p</i>: <i>Y</i> -> <i>X</i>, the stalk at any point
+<i>x</i> of <i>X</i> can be found by looking at the <i>inverse image</i> of <i>x</i>,
+the set of points <i>y</i> such that <i>p</i>(<i>y</i>) = <i>x</i>.
+This is also known as the <i>fibre</i> over <i>x</i>.</p>
+<p>
+Now the idea of fibre works for any map <i>p</i> - it does not have to be a
+local homeomorphism. But in general the fibre has a topology of its own, so we should
+think of it as a topological space rather than a set. Thus <i>p</i> gets viewed as a
+variable space (the fibre), varying as the point <i>x</i> varies. From this point of view
+I shall call <i>p</i> a <i>bundle</i>.
+(Note for the knowledgeable: I'm not making any other assumptions, such as whether the
+fibres are non-empty.) Then a sheaf is a bundle in which all the fibres are sets - they
+have the discrete topology. A sheaf is a "bundle of sets".</p>
+<p>
+Remarkably, the bundle idea still works in point-free topology, and in some ways
+it actually works even better. The "internal mathematics of toposes" mentioned above,
+when done for sheaves over <i>X</i>, amounts to a set theory "parametrized by points
+of <i>X</i>". (This works best when you restrict yourself to the geometric mathematics.)
+An old and important result of topos theory shows that when you simulate
+point-free topology in this internal mathematics, you end up with a mathematics
+of point-free bundles.</p>
+<p>
+In other words, you can discuss bundles in the same way as you discuss spaces,
+so long as you work (i) point-free, and (ii) in geometric logic. Since geometric logic
+is weaker than classical logic, this makes it quite interesting to ask how much of
+ordinary mathematics can be done geometrically. Much of my work has been looking at
+particular instances of this question.</p>
+-->
+
+<a name="intro"></a>
+<h3>Some of my introductory writings</h3>
+<ul>
+<li>
+<i><a href="papersfull.php#PtfreePtwise">Generalized point-free spaces, pointwise</a></i> gives a recent (2022) general background account of the ideas, including a discussion of terminology and a use of notation from dependent type theory for variable sets and spaces.
+</li>
+<li>
+<a href="papersfull.php#LocTopSpaces"><i>Locales and toposes as spaces</i></a> -
+a reader's guide to two of the standard topos introductions, from the point of view
+of geometric logic and points.
+In fact this big chapter is my first stab at writing a constructive version of "Topology via Logic".
+</li>
+<li>
+Two tutorial presentations, for
+<a href="talks.php#TACL2017">TACL 2017</a>, and
+<a href="talks.php#4WFTop">4WFT 2012</a>;
+also <a href="talks.php">various other talks</a>.
+</li>
+<li>
+<a href="papersfull.php#Ontology"><i>Issues of logic, algebra and topology
+in ontology</i></a> describes in detail the "observational" ideas underlying first-order geometric logic.
+It expands on the motivation used in
+<a href="papersfull.php#TVL"><i>Topology via Logic</i></a>.
+</li>
+<li>
+<a href="papersfull.php#GeoFuzzy"><i>Fuzzy sets and geometric logic</i></a> -
+includes an introduction to sheaves (variable sets).
+</li>
+<li>
+"<a href="gorillas">Toposes, elephants and gorillas</a>" - zoological metaphors.
+</li>
+</ul>
+
+<a name="technical"></a>
+<h3>More technical issues</h3>
+<p>
+As I mentioned, much of my work investigates how ordinary mathematics can be done
+in geometric logic. The underlying problem is that a point-free space may really not have
+enough points. In logical terms (point = model of a theory), this is because geometric
+theories may be incomplete. But that shortage of points is only if the models are sought
+in ordinary sets. There will always be enough points if you are prepared to seek
+models in non-standard sets (i.e. in the internal mathematics of toposes).
+The advantage of geometric logic is that it applies equally well in all those
+non-standard universes, and transports cleanly between them
+(technically: it is preserved by inverse image functors of geometric morphisms).
+Hence by reasoning geometrically you cover also these non-standard points, and of them
+there are enough.
+<p>
+Many of the ideas are set out in
+<a href="papersfull.php#TCD"><i>Topical categories of domains</i></a>, which investigates
+results known from domain theory and the semantics of computer programming languages (in particular, the results of Samson Abramsky's logical approach).
+It uses geometric logic to exploit in a deep way the idea of classifying toposes as
+spaces of points.</p>
+<p>
+An important tool is the theory of <i>powerlocales</i>, or "point-free hyperspaces".
+(A <i>hyperspace</i> is a space whose points are subspaces of some other space.
+As <i>powerdomains</i> they have proved an effective tool for discussing
+non-determinism in computation, since the result of a function then may be a subspace
+of points rather than a single point.)
+These give a powerful way to discuss issues such as compactness
+and I have used them throughout my work.
+Their good interaction with geometric logic is described in detail in
+<a href="papersfull.php#PPandExp"><i>The double powerlocale and exponentiation</i></a>,
+which investigates Martin Hyland's famous result from point-free topology on the ability to construct
+spaces of maps (and, technically, on local compactness).</p>
+
+<a name="AUs"></a>
+<h3>Arithmetic universes</h3>
+<p>
+One important consequence of the infinitary disjunctions in geometric logic is that
+there is a "geometric type theory" to go with it.
+An interesting question,
+proposed in <a href="papersfull.php#TCD"><i>Topical categories of domains</i></a>
+and discussed in
+<a href="papersfull.php#LocTopSpaces"><i>Locales and toposes as spaces</i></a>,
+concerns what happens if one combines some of the type theory with the <i>finitary</i>
+geometric logic, i.e. coherent logic. This is an "arithmetic" logic, and corresponds to
+using Joyal's <i>arithmetic universes</i> as a substitute for
+Grothendieck toposes.
+Though it is formally less powerful than geometric logic,
+it is at least strong enough to cover real numbers
+and leads to a constructive logic that does not depend on choosing
+a base elementary topos "of sets".
+</p>
+<p>
+Grothendieck topos theory might be characterized as
+"generalized point-free topology",
+where the generalization is to spaces of models of non-propositional geometric theories,
+and consequently the point-free approach has to shift
+from lattices (of opens) to categories (of sheaves).
+See my <a href="talks.php#TACL2017">TACL talks</a> 1-4.
+</p>
+<p>
+The methodology then is that a space <i>is</i>
+a Grothendieck topos (the category of sheaves),
+and a continuous map <i>is</i> a geometric morphism.
+However, a the category of sheaves
+has to be based on a given category of sets.
+That could be any elementary topos with natural numbers object,
+not necessarily the classical sets;
+but the fact of having to choose is itself a nuisance
+that makes it harder to be foundationally robust.
+</p>
+<p>
+  The AU dream is to state and prove topological results in
+  a constructive, foundationally robust way
+  that does not depend on choosing a base topos
+  (or a base anything).
+  See my <a href="talks.php#TACL2017">TACL talks</a> 5.
+</p>
+<p>
+  At present we are a long way from realising that dream
+  in algebraic topology, which presents big challenges.
+  Grothendieck used toposes as a place in which to do
+  sheaf cohomology, and those techniques would certainly not
+  work unmodified with AUs.
+</p>
+<p>
+See -
+<ul> 
+  <li><a href="papersfull.php#ArithInd">An induction principle
+     for consequence in arithmetic universes</a></li>
+  <li>
+    <a href="papersfull.php#AUSk">Sketches for arithmetic universes</a>.
+  </li>
+  <li><a href="papersfull.php#AUClTop">Arithmetic universes
+     and classifying toposes</a></li>
+</ul>
+</p>
+<p>
+Also, for a good report on the basic ideas as known in 1996, see Alan Morrison's MSc dissertation
+"<a href="morrisonpage.php">Reasoning in Arithmetic Universes</a>".
+</p>
+
+<a name="PhD"></a>
+<h1><a name="PhD"></a>PhDs under my supervision</h1>
+<p>
+I am now retired from Birmingham University, though I still take part in research activities of the Theory Group.
+In principle, as an honorary member of staff, I can still supervise PhD students. However, it is most unlikely that there would be any university funding available for it.
+</p>
+
+
+
+<!-- #EndEditable -->
+
+<?php PageEnd(); ?>
+</body>
+<!-- InstanceEnd -->
+</html>

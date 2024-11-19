@@ -1,0 +1,10 @@
+<li><a href="index.php">Steve Vickers's home page</a></li>
+<li><a href="YaMKittens">YaMKittens</a></li>
+<li> <a href="research.php">Research</a></li>
+<li> <a href="papersfull.php">Papers</a></li>
+<li> <a href="talks.php">Talks</a></li>
+<li> <a href="phds.php">PhDs</a></li>
+<!-- <li> <a href="teachingAdmin.php">Teaching and Admin</a></li> -->
+<li><a href="teaching/introCS">Introduction to Computer Science</a></li>
+<li><a href="6WFTop">6WFTop</a></li>
+<li> <a href="macroturtles/TurtlesApplet.html">Turtle Graphics</a></li>
